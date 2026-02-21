@@ -1,0 +1,88 @@
+header,
+footer,
+section,
+section div,
+div {
+	align-items: center;
+	justify-content: center;
+	gap: 2em;
+	padding: 1rem 0;
+}
+
+body>div {
+	background-image: none;
+
+}
+
+#intro {
+	background-image: none;
+}
+
+#features div {
+	&:first-of-type {
+		justify-content: center;
+		align-items: center;
+	}
+
+	&:last-of-type div {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 2rem;
+	}
+}
+
+header {
+	grid-area: header;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 1%;
+	flex-direction: column;
+	align-items: space-evenly;
+	gap: 1rem;
+	padding: 1rem;
+	margin-top: 1rem;
+}
+
+nav {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+
+	a:hover {
+		color: black;
+
+		&::after {
+			content: "";
+			bottom: -0.5em;
+		}
+	}
+}
+
+footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 1.5rem;
+
+	section {
+		&:first-of-type {
+			justify-content: center;
+		}
+
+		div {
+			height: 0;
+		}
+
+		img {
+			padding-top: 10px;
+			width: inherit;
+
+		}
+
+		.button {
+			align-self: center;
+		}
+	}
+}
